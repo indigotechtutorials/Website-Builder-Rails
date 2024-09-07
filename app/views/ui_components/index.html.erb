@@ -1,0 +1,21 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <% content_for :title, "Ui components" %>
+
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Ui components</h1>
+    <%= link_to "New ui component", new_ui_component_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+  <div id="ui_components" class="min-w-full">
+    <% @ui_components.each do |ui_component| %>
+      <%= render ui_component %>
+      <p>
+        <%= link_to "Show this ui component", ui_component, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      </p>
+    <% end %>
+  </div>
+</div>

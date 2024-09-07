@@ -1,0 +1,18 @@
+<div class="w-full max-w-5xl mx-auto mt-24">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <% content_for :title, "Websites" %>
+
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Websites</h1>
+    <%= link_to "New website", new_website_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+  <div id="websites" class="min-w-full flex flex-col gap-4 mt-8">
+    <% @websites.each do |website| %>
+      <%= render website %>
+    <% end %>
+  </div>
+</div>

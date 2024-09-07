@@ -1,0 +1,15 @@
+<div class="flex" data-controller="drag" data-drag-url-value="<%= website_path(@website) %>" data-drag-param-name-value="ui_component_id"> 
+  <div class="w-4/5 min-h-screen" data-action="dragover->drag#allowDrop drop->drag#drop" id="html-content"><%== @website.html_content %></div>
+  <div class="w-1/5 bg-gray-300 h-screen fixed right-0 top-0"> 
+    <h2 class="text-gray-800 text-center mt-4"> Pick out components </h2>
+    <div class="mt-4 grid grid-cols-2 gap-y-8">
+      <% UiComponent.all.each do |ui_component| %>
+        <div class="flex flex-col items-center hover:bg-gray-100 py-2 cursor-pointer" draggable="true" 
+            data-action="dragstart->drag#start" data-drag-data="<%= ui_component.id %>">
+          <div class="rounded-lg bg-gray-400 h-24 w-24"> </div>
+          <p class="text-center"> <%= ui_component.name %> </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<div>

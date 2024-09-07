@@ -1,0 +1,2 @@
+class UiComponent < ApplicationRecord
+end
