@@ -1,25 +1,22 @@
-# README
+# A Simple Drag n Drop Website Builder
+### Made with Ruby on Rails, Hotwire, TailwindCSS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Installation Instructions
 
-Things you may want to cover:
+A local version of Ruby 3 is required for this App and you should also have Rails installed before you try and use this app.
 
-* Ruby version
+- Step 1: Download the source code from Github
+- Step 2: cd into the app 
+- Step 3: install the required gems with this command
 
-* System dependencies
+`bundle install`
 
-* Configuration
+- Step 4: run the following command to setup the database
 
-* Database creation
+`rails db:create db:migrate`
 
-* Database initialization
+- Step 5: final step is to run bin/dev and go view the app at localhost:3000
 
-* How to run the test suite
+`bin/dev`
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
-# Website-Builder-Rails
